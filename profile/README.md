@@ -15,7 +15,7 @@ For instance,
 
 ### 2. Dump KISS image to it.
 
-    # Currently, you might want to download it from [here](https://github.com/glasnostlinux/glasnost/releases). Please notice that "core" version is not enough for bootstrap. 
+    # Currently, you might want to download it from [here](https://github.com/glasnostlinux/glasnost/releases). Please notice that the "core" versions is not enough for bootstrap. 
     curl -fLO https://github.com/glasnostlinux/glasnost/releases/download/2021.10-01/glasnost-chroot-x86_64-2021.10-01.tar.xz
     tar --numeric-owner --overwrite -xJf ./glasnost-chroot-x86_64-2021.10-01.tar.xz --directory /mnt/kiss --strip-components=1 2>&1
 
@@ -54,9 +54,15 @@ Substitude partition parametes to actual values. One of the following methods mi
 
 ### 8. Further discussion / development
 
-    [Telegram](https://t.me/llvm_musl)
-    [Matrix](https://matrix.org/#/%23llvm-musl%3Amatrix.org)
-    [Reddit](https://www.reddit.com/r/kisslinux)
+    [llvm-musl on telegram][llvm-musl]
+    [Kiss Linux on Telegram][kiss-linux]
+    [llvm-musl on Matrix][matrix]
+    [Reddit][reddit]
+
+[llvm-musl]: https://t.me/llvm_musl
+[kiss-linux]: https://t.me/Kiss_Linux
+[matrix]: https://matrix.org/#/%23llvm-musl%3Amatrix.org
+[reddit]: https://www.reddit.com/r/kisslinux
 
 <!--
 
