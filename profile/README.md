@@ -45,9 +45,13 @@ Substitude partition parametes to actual values. One of the following methods mi
     
 ### 6. Generate /etc/fstab, time zone, etc.
 
-"genfstab" is a bash script, you can run it outside chroot if you do not want to install bash in kiss
 
     genfstab -U -p / >> /etc/fstab
+
+"genfstab" is a bash script, you can run it outside chroot if you do not want to install bash in kiss
+
+    /mnt/genfstab -U -p /mnt/kiss >> /mnt/kiss/etc/fstab
+
 
 ### 7. Boot into it.
 
