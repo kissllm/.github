@@ -14,14 +14,16 @@ For instance,
     /boot/efi (mount /dev/nvme1n1p1 /mnt/kiss/boot/efi) [fat32]
 
 ### 2. Dump KISS image to it.
+    
+Currently, you might want to download it from [here](https://github.com/glasnostlinux/glasnost/releases). Please notice that the "core" versions is not enough for bootstrap. 
 
-    # Currently, you might want to download it from [here](https://github.com/glasnostlinux/glasnost/releases). Please notice that the "core" versions is not enough for bootstrap. 
     curl -fLO https://github.com/glasnostlinux/glasnost/releases/download/2021.10-01/glasnost-chroot-x86_64-2021.10-01.tar.xz
     tar --numeric-owner --overwrite -xJf ./glasnost-chroot-x86_64-2021.10-01.tar.xz --directory /mnt/kiss --strip-components=1 2>&1
 
 ### 3. "chroot" to it.
 
-    # A chroot script named "root"
+A chroot script named "root"
+
     doas root /mnt/kiss /bin/ash
 
 ### 4. Install a kernel
@@ -43,34 +45,33 @@ Substitude partition parametes to actual values. One of the following methods mi
     
 ### 6. Generate /etc/fstab, time zone, etc.
 
-    # genfstab is a bash script, you can run it outside chroot if you do not want to install bash in kiss
+"genfstab" is a bash script, you can run it outside chroot if you do not want to install bash in kiss
+
     genfstab -U -p / >> /etc/fstab
 
 ### 7. Boot into it.
 
-    # quit chroot
+Quit chroot
+
     sync && exit
     doas reboot
 
 ### 8. Further discussion / development
 
-    [llvm-musl on telegram][llvm-musl]
-    [Kiss Linux on Telegram][kiss-linux]
-    [llvm-musl on Matrix][matrix]
-    [Reddit][reddit]
+[llvm-musl on Telegram][llvm-musl]
+
+<!-- p><a href="https://matrix.org/#/%23llvm-musl%3Amatrix.org"> llv-mmusl on matrix </a></p -->
+
+[llvm-musl on Matrix][matrix]
+
+[KISS Linux on Telegram][kiss-linux]
+
+[KISS Linux on Reddit][reddit]
+
 
 [llvm-musl]: https://t.me/llvm_musl
-[kiss-linux]: https://t.me/Kiss_Linux
 [matrix]: https://matrix.org/#/%23llvm-musl%3Amatrix.org
+[kiss-linux]: https://t.me/Kiss_Linux
 [reddit]: https://www.reddit.com/r/kisslinux
 
-<!--
 
-**Here are some ideas to get you started:**
-
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
