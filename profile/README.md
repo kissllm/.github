@@ -38,7 +38,7 @@ Manual kernel configuration might be needed.
 
 ### 5. Generate boot loaders
 
-Substitude partition parametes to actual values. One of the following methods[1](https://github.com/kissllm/dotconfig/blob/master/b) might be more convenient for you:
+Substitude partition parametes to actual values. One of the following methods[[1]](https://github.com/kissllm/dotconfig/blob/master/b) might be more convenient for you:
 
     efibootmgr -c -d /dev/nvme1n1 -L "KISS Linux (EFI Stub)" -l "\EFI\efistub\vmlinuz.efi" 'root=/dev/nvme1n1p3 ro resume=/dev/nvme1n1p2 tsc=unstable'
     grub-install --target=x86_64-efi --efi-directory=/boot/efi --boot-directory=/boot --bootloader-id=kiss /dev/nvme1n1
