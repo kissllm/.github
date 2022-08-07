@@ -48,7 +48,7 @@ Substitude partition parametes to actual values. One of the following methods mi
 
     genfstab -U -p / >> /etc/fstab
 
-"genfstab" is a bash script, you can run it outside chroot if you do not want to install bash in kiss
+"[genfstab](https://github.com/kissllm/dotconfig/blob/master/genfstab)" is a bash script, you can run it outside chroot if you do not want to install bash in kiss
 
     /mnt/genfstab -U -p /mnt/kiss >> /mnt/kiss/etc/fstab
 
