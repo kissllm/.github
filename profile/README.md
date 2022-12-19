@@ -22,8 +22,9 @@ Currently, you might want to download it from [here](https://github.com/glasnost
 
 ### 3. "chroot" to it.
 
-A chroot script named "[root](https://github.com/kissllm/dotconfig/blob/master/local/bin/root)"
+An example partition mount "[load-kiss](https://github.com/kissllm/dotconfig/blob/master/load-kiss)" and a chroot script "[root](https://github.com/kissllm/dotconfig/blob/master/local/bin/root)"
 
+    doas load-kiss
     doas root /mnt/kiss /bin/ash
 
 ### 4. Install a kernel
