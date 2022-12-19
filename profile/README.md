@@ -47,13 +47,13 @@ Substitude partition parametes to actual values. One of the following methods[[1
 ### 6. Generate /etc/fstab, time zone, etc.
 
 
-    genfstab -U -p / >> /etc/fstab
+    doas /mnt/local/bin/fstab -U -P / >> /etc/fstab
 
-"[genfstab](https://github.com/kissllm/dotconfig/blob/master/genfstab)" is a bash script, you can run it outside chroot if you do not want to install bash in kiss
+"[fstab](https://github.com/kissllm/dotconfig/blob/master/local/bin/fstab)" is an ash script, you can run it outside chroot
 
-    /mnt/genfstab -U -p /mnt/kiss >> /mnt/kiss/etc/fstab
+    doas /mnt/local/bin/fstab -U -P /mnt/kiss >> /mnt/kiss/etc/fstab
 
-
+Manually comment out some optional items.
 ### 7. Boot into it.
 
 Quit chroot
