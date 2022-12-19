@@ -22,7 +22,7 @@ Currently, you might want to download it from [here](https://github.com/glasnost
 
 ### 3. "chroot" to it.
 
-A chroot script named "[root](https://github.com/kissllm/dotconfig/blob/master/root)"
+A chroot script named "[root](https://github.com/kissllm/dotconfig/blob/master/local/bin/root)"
 
     doas root /mnt/kiss /bin/ash
 
