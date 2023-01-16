@@ -35,7 +35,7 @@ Manual kernel configuration might be needed.
     git clone --recursive https://github.com/kissllm/glasnost.git
     cd glasnost
     git submodule update --remote --init --recursive
-    kISS_PATH=/var/db/kiss/glasnost/system kiss b linux
+    kISS_PATH=/var/db/kiss/glasnost/system kiss p linux
 
 ### 5. Generate boot loaders
 
